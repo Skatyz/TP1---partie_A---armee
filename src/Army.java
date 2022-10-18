@@ -7,11 +7,18 @@ public abstract class Army {
     private int healthPoints;
 
     public Army(String armyName, int strength, int dexterity, int intelligence, int focus, int healthPoints) {
-        setArmyName(armyName);
+        this.armyName = armyName;
+
         setStrength(strength);
         setDexterity(dexterity);
         setIntelligence(intelligence);
         setFocus(focus);
+
+        if (strength + dexterity + intelligence + focus > 100){
+            throw new IllegalArgumentException();
+        }
+
+        healthPoints = 200 - (strength + dexterity + intelligence + focus);
         setHealthPoints(healthPoints);
     }
 
