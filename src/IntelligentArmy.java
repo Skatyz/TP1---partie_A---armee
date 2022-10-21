@@ -1,2 +1,2 @@
-public class IntelligentArmy {
+public class IntelligentArmy extends Army{
 }

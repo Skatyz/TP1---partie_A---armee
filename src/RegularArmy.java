@@ -1,2 +1,2 @@
-public class RegularArmy {
+public class RegularArmy extends Army{
 }

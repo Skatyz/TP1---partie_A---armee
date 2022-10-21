@@ -1,2 +1,3 @@
-public class BruteForceArmy {
+public class BruteForceArmy extends Army {
+
 }
