@@ -6,14 +6,16 @@ public class RegularArmy extends Army{
     @Override
     public boolean isDead(int attackPoints) {
         Army theArmy = null;
+        Boolean isArmyDead = false;
         if (theArmy.getHealthPoints() <= 8 && theArmy.getHealthPoints() > 0){
             theArmy.setHealthPoints(theArmy.getHealthPoints() + attackPoints);
-            return false;
+            isArmyDead = false;
         } else {
             theArmy.setHealthPoints(theArmy.getHealthPoints() - attackPoints);
         }
         if (theArmy.getHealthPoints() <= 0){
-            return true;
+            isArmyDead = true;
         }
+        return isArmyDead;
     }
 }
