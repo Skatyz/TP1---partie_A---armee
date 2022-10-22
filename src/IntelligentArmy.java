@@ -4,7 +4,13 @@ public class IntelligentArmy extends Army{
     }
 
     @Override
-    public boolean isDead() {
-        return false;
+    public boolean isDead(int attackPoints) {
+        Army theArmy = null;
+        theArmy.setHealthPoints(theArmy.getHealthPoints() - (attackPoints/2));
+        if (theArmy.getHealthPoints() <= 0){
+            return false;
+        } else {
+            return true;
+        }
     }
 }

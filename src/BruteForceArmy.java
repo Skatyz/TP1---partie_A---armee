@@ -5,7 +5,14 @@ public class BruteForceArmy extends Army {
     }
 
     @Override
-    public boolean isDead() {
-        return false;
+    public boolean isDead(int attackPoints) {
+        Army theArmy = null;
+        theArmy.setHealthPoints(theArmy.getHealthPoints() - attackPoints);
+        if (theArmy.getHealthPoints() <= 0 && attackPoints < 10){
+            theArmy.setHealthPoints(theArmy.getHealthPoints() + attackPoints);
+            return false;
+        } else {
+            return true;
+        }
     }
 }

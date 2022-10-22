@@ -4,7 +4,18 @@ public class RegularArmy extends Army{
     }
 
     @Override
-    public boolean isDead() {
-        return false;
+    public boolean isDead(int attackPoints) {
+        Army theArmy = null;
+        boolean isArmyDead = false;
+        if (theArmy.getHealthPoints() <= 8 && theArmy.getHealthPoints() > 0){
+            theArmy.setHealthPoints(theArmy.getHealthPoints() + attackPoints);
+            isArmyDead = false;
+        } else {
+            theArmy.setHealthPoints(theArmy.getHealthPoints() - attackPoints);
+        }
+        if (theArmy.getHealthPoints() <= 0){
+            isArmyDead = true;
+        }
+        return isArmyDead;
     }
 }
