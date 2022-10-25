@@ -6,7 +6,7 @@ public abstract class Army {
     private int focus;
     private int healthPoints;
 
-    private Army armyDivision;
+    private Squad anySquad;
 
     public Army(String armyName, int strength, int dexterity, int intelligence, int focus) {
         ArmyFactory newArmy = new ArmyFactory();
@@ -26,7 +26,9 @@ public abstract class Army {
 
         newArmy.makeArmy();
 
-
+        getAnySquad().isOffensive();
+        getAnySquad().isDeffensive();
+        getAnySquad().isHealing();
     }
 
     public abstract boolean isDead(int attackPoints);
@@ -79,11 +81,11 @@ public abstract class Army {
         this.healthPoints = healthPoints;
     }
 
-    public Army getArmyDivision() {
-        return armyDivision;
+    public Squad getAnySquad() {
+        return anySquad;
     }
 
-    public void setArmyDivision(Army armyDivision) {
-        this.armyDivision = armyDivision;
+    public void setAnySquad(Squad anySquad) {
+        this.anySquad = anySquad;
     }
 }
