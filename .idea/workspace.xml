@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Army.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArmyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArmyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArmyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArmyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BruteForceArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BruteForceArmy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntelligentArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntelligentArmy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegularArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularArmy.java" afterDir="false" />
-    </list>
+    <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
