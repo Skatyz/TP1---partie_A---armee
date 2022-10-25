@@ -6,10 +6,10 @@ public abstract class Army {
     private int focus;
     private int healthPoints;
 
-    public Army(String armyName, int strength, int dexterity, int intelligence, int focus, int healthPoints) {
+    public Army(String armyName, int strength, int dexterity, int intelligence, int focus) {
         ArmyFactory newArmy = new ArmyFactory();
-        this.armyName = armyName;
 
+        setArmyName(armyName);
         setStrength(strength);
         setDexterity(dexterity);
         setIntelligence(intelligence);
@@ -21,6 +21,7 @@ public abstract class Army {
 
         healthPoints = 200 - (strength + dexterity + intelligence + focus);
         setHealthPoints(healthPoints);
+
         newArmy.makeArmy();
     }
 

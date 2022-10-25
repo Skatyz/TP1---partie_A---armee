@@ -1,7 +1,7 @@
 public class BruteForceArmy extends Army {
 
-    public BruteForceArmy(String armyName, int strength, int dexterity, int intelligence, int focus, int healthPoints) {
-        super(armyName, strength, dexterity, intelligence, focus, healthPoints);
+    public BruteForceArmy(String armyName, int strength, int dexterity, int intelligence, int focus) {
+        super(armyName, strength, dexterity, intelligence, focus);
     }
 
     @Override

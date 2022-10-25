@@ -1,6 +1,6 @@
 public class RegularArmy extends Army{
-    public RegularArmy(String armyName, int strength, int dexterity, int intelligence, int focus, int healthPoints) {
-        super(armyName, strength, dexterity, intelligence, focus, healthPoints);
+    public RegularArmy(String armyName, int strength, int dexterity, int intelligence, int focus) {
+        super(armyName, strength, dexterity, intelligence, focus);
     }
 
     @Override
