@@ -1,6 +1,12 @@
 public class ArmyFactory {
-    public Army makeArmy(Army newArmy){
+    public Army makeArmy(){
 
+        Army newArmy = new Army(makeArmy().getArmyName(), makeArmy().getStrength(), makeArmy().getDexterity(), makeArmy().getIntelligence(), makeArmy().getFocus()) {
+            @Override
+            public boolean isDead(int attackPoints) {
+                return false;
+            }
+        };
         if (newArmy.getStrength() >= newArmy.getDexterity() + 10 && newArmy.getDexterity() + 10 >= newArmy.getFocus()){
             return new BruteForceArmy(newArmy.getArmyName(), newArmy.getStrength(), newArmy.getDexterity(), newArmy.getIntelligence(), newArmy.getFocus());
         }
