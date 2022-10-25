@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k" />
+    <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k">
+      <change afterPath="$PROJECT_DIR$/src/AbstractSquad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArmyDivision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cavalry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Healing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sniper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SomeSquad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_16_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_16_18__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-25_14_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-25_14_08__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-10-22_16_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-10-22_16_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Army.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
