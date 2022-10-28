@@ -8,7 +8,7 @@ public abstract class Army {
 
     private Squad anySquad;
 
-    public Army(String armyName, int strength, int dexterity, int intelligence, int focus) {
+    public Army(String armyName, int strength, int dexterity, int intelligence, int focus, Squad squad) {
         ArmyFactory newArmy = new ArmyFactory();
 
         setArmyName(armyName);
@@ -26,9 +26,11 @@ public abstract class Army {
 
         newArmy.makeArmy();
 
+        setAnySquad(squad);
         getAnySquad().isOffensive();
         getAnySquad().isDeffensive();
         getAnySquad().isHealing();
+        //getAnySquad().getPower(, getStrength());
     }
 
     public abstract boolean isDead(int attackPoints);

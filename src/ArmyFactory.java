@@ -1,7 +1,7 @@
 public class ArmyFactory {
     public Army makeArmy(){
 
-        Army newArmy = new Army(makeArmy().getArmyName(), makeArmy().getStrength(), makeArmy().getDexterity(), makeArmy().getIntelligence(), makeArmy().getFocus()) {
+        Army newArmy = new Army(makeArmy().getArmyName(), makeArmy().getStrength(), makeArmy().getDexterity(), makeArmy().getIntelligence(), makeArmy().getFocus(), makeArmy().getAnySquad()) {
             @Override
             public boolean isDead(int attackPoints) {
                 return false;

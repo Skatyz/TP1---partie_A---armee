@@ -6,7 +6,7 @@ class ArmyTest {
 
     @Test
     void canCreateArmyWithHealthPoints() {
-        Army newArmy = new Army("Canada", 16, 5, 9, 10) {
+        Army newArmy = new Army("Canada", 16, 5, 9, 10, ) {
             @Override
             public boolean isDead(int attackPoints) {
                 return false;

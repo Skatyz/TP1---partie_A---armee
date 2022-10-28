@@ -1,16 +1,22 @@
 public abstract class AbstractSquad implements Squad{
-    @Override
+
     public boolean isDeffensive() {
         return false;
     }
 
-    @Override
+
     public boolean isOffensive() {
         return false;
     }
 
-    @Override
+
     public boolean isHealing() {
         return false;
+    }
+
+    public void validateCharacteristic(int characteristic){
+        if (characteristic < 20 || characteristic > 100){
+            throw new IllegalArgumentException();
+        }
     }
 }
