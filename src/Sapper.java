@@ -14,8 +14,8 @@ public class Sapper extends AbstractSquad{
     public boolean isDeffensive(){
         return true;
     }
-
-    public int getCraziness() {
+    @Override
+    public int getCharacteristic() {
         return craziness;
     }
 

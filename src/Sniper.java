@@ -13,8 +13,8 @@ public class Sniper extends AbstractSquad{
     public boolean isOffensive(){
         return true;
     }
-
-    public int getAccuracy() {
+    @Override
+    public int getCharacteristic() {
         return accuracy;
     }
 

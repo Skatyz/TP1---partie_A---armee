@@ -30,7 +30,9 @@ public abstract class Army {
         getAnySquad().isOffensive();
         getAnySquad().isDeffensive();
         getAnySquad().isHealing();
-        //getAnySquad().getPower(, getStrength());
+
+        SquadFactory newSquad = new SquadFactory();
+        newSquad.makeSquad(squad.getCharacteristic());
     }
 
     public abstract boolean isDead(int attackPoints);

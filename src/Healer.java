@@ -14,7 +14,8 @@ public class Healer extends AbstractSquad{
         return true;
     }
 
-    public int getExperience() {
+    @Override
+    public int getCharacteristic() {
         return experience;
     }
 

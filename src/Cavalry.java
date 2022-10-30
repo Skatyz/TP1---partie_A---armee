@@ -15,7 +15,8 @@ public class Cavalry extends AbstractSquad{
         return true;
     }
 
-    public int getImpact() {
+    @Override
+    public int getCharacteristic() {
         return impact;
     }
 

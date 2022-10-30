@@ -13,7 +13,8 @@ public class Infantry extends AbstractSquad{
         return true;
     }
 
-    public int getCohesion() {
+    @Override
+    public int getCharacteristic() {
         return cohesion;
     }
 

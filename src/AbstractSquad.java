@@ -13,6 +13,8 @@ public abstract class AbstractSquad implements Squad{
     public boolean isHealing() {
         return false;
     }
+    @Override
+    public abstract int getCharacteristic();
 
     public void validateCharacteristic(int characteristic){
         if (characteristic < 20 || characteristic > 100){
