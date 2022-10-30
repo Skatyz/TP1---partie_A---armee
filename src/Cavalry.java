@@ -4,7 +4,7 @@ public class Cavalry extends AbstractSquad{
     public Cavalry(int impact){
         setImpact(impact);
     }
-    @Override
+
     public int getPower(Army theArmy, int impact) {
         return theArmy.getStrength() * impact / 20;
     }

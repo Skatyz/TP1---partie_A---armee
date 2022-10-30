@@ -5,13 +5,9 @@ public class Sapper extends AbstractSquad{
     public Sapper(int craziness){
         setCraziness(craziness);
     }
-    @Override
+
     public int getPower(Army theArmy, int craziness) {
         return theArmy.getIntelligence() * craziness / 20;
-    }
-    @Override
-    public boolean isOffensive(){
-        return true;
     }
 
     @Override

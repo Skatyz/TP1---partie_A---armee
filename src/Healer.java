@@ -5,7 +5,7 @@ public class Healer extends AbstractSquad{
     public Healer(int experience){
         setExperience(experience);
     }
-    @Override
+
     public int getPower(Army theArmy, int experience) {
         return theArmy.getFocus() * experience / 20;
     }

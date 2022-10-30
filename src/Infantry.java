@@ -4,7 +4,7 @@ public class Infantry extends AbstractSquad{
     public Infantry(int cohesion){
         setCohesion(cohesion);
     }
-    @Override
+
     public int getPower(Army theArmy, int cohesion) {
         return theArmy.getDexterity() * cohesion / 20;
     }
