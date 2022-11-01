@@ -6,12 +6,7 @@ class ArmyTest {
 
     @Test
     void canCreateArmyWithHealthPoints() {
-        Army newArmy = new Army("Canada", 16, 5, 9, 10) {
-            @Override
-            public boolean isDead(int attackPoints) {
-                return false;
-            }
-        };
+        Army newArmy = new BruteForceArmy("Canada", 16, 5, 9, 10);
         final int EXPECTED_HEALTH_POINTS = 160;
 
         int actualHealthPoints = newArmy.getHealthPoints();
@@ -19,6 +14,15 @@ class ArmyTest {
         assertEquals(EXPECTED_HEALTH_POINTS, actualHealthPoints);
     }
 
+    @Test
+    void getPower() {
+        final int EXPECTED_POWER = 40;
+        Squad newSquad = new Cavalry(50);
+        Army newArmy = new BruteForceArmy("Canada", 16, 5, 9, 10);
 
+        int power = newSquad.getPower(newArmy, newSquad.getCharacteristic());
+
+        assertEquals(EXPECTED_POWER, power);
+    }
 
 }

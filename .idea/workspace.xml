@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Army.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArmyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArmyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArmyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArmyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SomeSquad.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +36,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ArmyTest.canCreateArmyWithHealthPoints">
+  <component name="RunManager" selected="JUnit.ArmyTest.getPower">
     <configuration name="ArmyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="PACKAGE_NAME" value="" />
@@ -59,8 +56,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArmyTest.getPower" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArmyTest" />
+      <option name="METHOD_NAME" value="getPower" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArmyTest.getPower" />
         <item itemvalue="JUnit.ArmyTest.canCreateArmyWithHealthPoints" />
         <item itemvalue="JUnit.ArmyTest" />
       </list>
@@ -131,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667162392892</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="k">
+      <created>1667267420462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667267420462</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
