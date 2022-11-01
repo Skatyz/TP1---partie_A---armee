@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5795bfa-92f9-447a-b37c-702c55d88f28" name="Changes" comment="k">
-      <change afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Army.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArmyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArmyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BruteForceArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BruteForceArmy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntelligentArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntelligentArmy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegularArmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularArmy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -150,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667267420462</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="k">
+      <created>1667330441500</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667330441500</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -3,19 +3,20 @@ public class RegularArmy extends Army{
         super(armyName, strength, dexterity, intelligence, focus);
     }
 
-    @Override
-    public boolean isDead(int attackPoints) {
-        Army theArmy = null;
-        boolean isArmyDead = false;
-        if (theArmy.getHealthPoints() <= 8 && theArmy.getHealthPoints() > 0){
-            theArmy.setHealthPoints(theArmy.getHealthPoints() + attackPoints);
-            isArmyDead = false;
+    public void takeDamage(int attackPoints){
+        if (getHealthPoints() <= 8 && getHealthPoints() > 0){
+            setHealthPoints(getHealthPoints() + attackPoints);
         } else {
-            theArmy.setHealthPoints(theArmy.getHealthPoints() - attackPoints);
+            setHealthPoints(getHealthPoints() - attackPoints);
         }
-        if (theArmy.getHealthPoints() <= 0){
-            isArmyDead = true;
+    }
+
+    @Override
+    public boolean isDead() {
+        if (getHealthPoints() > 0){
+            return false;
+        } else {
+            return true;
         }
-        return isArmyDead;
     }
 }

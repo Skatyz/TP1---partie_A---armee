@@ -3,7 +3,7 @@ public class ArmyFactory {
 
         Army newArmy = new Army(makeArmy().getArmyName(), makeArmy().getStrength(), makeArmy().getDexterity(), makeArmy().getIntelligence(), makeArmy().getFocus()) {
             @Override
-            public boolean isDead(int attackPoints) {
+            public boolean isDead() {
                 return false;
             }
         };

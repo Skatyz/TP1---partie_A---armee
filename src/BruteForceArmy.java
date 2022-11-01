@@ -4,12 +4,16 @@ public class BruteForceArmy extends Army {
         super(armyName, strength, dexterity, intelligence, focus);
     }
 
+    public void takeDamage(int attackPoints){
+        setHealthPoints(getHealthPoints() - attackPoints);
+        if (getHealthPoints() <= 0 && attackPoints < 10){
+            setHealthPoints(getHealthPoints() + attackPoints);
+        }
+    }
+
     @Override
-    public boolean isDead(int attackPoints) {
-        Army theArmy = null;
-        theArmy.setHealthPoints(theArmy.getHealthPoints() - attackPoints);
-        if (theArmy.getHealthPoints() <= 0 && attackPoints < 10){
-            theArmy.setHealthPoints(theArmy.getHealthPoints() + attackPoints);
+    public boolean isDead() {
+        if (getHealthPoints() > 0){
             return false;
         } else {
             return true;

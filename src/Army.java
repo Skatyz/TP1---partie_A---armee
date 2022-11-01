@@ -34,7 +34,7 @@ public abstract class Army {
         newSquad.makeSquad(anySquad.getCharacteristic());
     }
 
-    public abstract boolean isDead(int attackPoints);
+    public abstract boolean isDead();
 
     public String getArmyName() {
         return armyName;
