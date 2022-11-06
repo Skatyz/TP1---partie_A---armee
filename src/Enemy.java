@@ -1,4 +1,4 @@
 public interface Enemy {
-public void attacker();
-public void defender();
+    public Army attacker(Army attacker);
+    public Army counter(Army counter);
 }

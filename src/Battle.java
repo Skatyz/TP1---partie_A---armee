@@ -1,88 +1,66 @@
-public class Battle implements Enemy {
-    public Battle (Squad prizeForWinner){
-        Army army1 = new BruteForceArmy("Army1", 30, 10, 10, 10);
-        Army army2 = new IntelligentArmy("Army2", 10, 10, 30, 10);
-        if (!army1.isDead() && !army2.isDead()){
+public class Battle {
+    private Army attacker;
+    private Army counter;
 
+    private SquadTypes squadTypeA;
+    private SquadTypes squadTypeD;
+
+    private SquadFactory newSquad;
+
+    private Squad squad;
+
+    public Battle (Army attacker, Army defender, SquadTypes squadTypeA, SquadTypes squadTypeD){
+        setAttacker(attacker);
+        setCounter(defender);
+        setSquadTypeA(squadTypeA);
+        setSquadTypeD(squadTypeD);
+    }
+
+    public void fight(Squad prizeForWinner){
+        if (attacker.attacker(getAttacker()).isDead() && !counter.counter(getCounter()).isDead()){
+            int attackPower = attacker.getNewSquad().createOffensiveSquad(getSquadTypeA()).getPower(getAttacker(), squad.getCharacteristic());
+            int counterPower = counter.getNewSquad().createDefensiveSquad(getSquadTypeD()).getPower(getCounter(), squad.getCharacteristic());
+
+            if (attackPower > counterPower) {
+                counter.setHealthPoints(counter.getHealthPoints() - attackPower);
+                attacker.setAnySquad(prizeForWinner);
+            }
+            else{
+                attacker.setHealthPoints(attacker.getHealthPoints() - counterPower);
+                counter.setAnySquad(prizeForWinner);
+            }
         }
-
-
     }
 
-
-    @Override
-    public void attacker() {
-        Army attackArmy = new Army(attackArmy.getArmyName(), 30, 10, 10, 10) {
-            @Override
-            public boolean isDead() {
-                return false;
-            }
-        };
-        SquadFactory makeSquad = new SquadFactory();
-        Squad newSquad = new Squad() {
-            @Override
-            public int getPower(Army army, int characteristic) {
-                getPower(attackArmy, getCharacteristic());
-            }
-
-            @Override
-            public int getCharacteristic() {
-                return getCharacteristic();
-            }
-
-            @Override
-            public boolean isOffensive() {
-                return true;
-            }
-
-            @Override
-            public boolean isDeffensive() {
-                return false;
-            }
-
-            @Override
-            public boolean isHealing() {
-                return false;
-            }
-        };
-        makeSquad.makeSquad(newSquad.getCharacteristic());
+    public Army getCounter() {
+        return counter;
     }
 
-    @Override
-    public void defender() {
-        Army defendArmy = new Army(defendArmy.getArmyName(), 30, 10, 10, 10) {
-            @Override
-            public boolean isDead() {
-                return false;
-            }
-        };
-        SquadFactory makeSquad = new SquadFactory();
-        Squad newSquad = new Squad() {
-            @Override
-            public int getPower(Army army, int characteristic) {
-                getPower(defendArmy, getCharacteristic());
-            }
+    public void setCounter(Army counter) {
+        this.counter = counter;
+    }
 
-            @Override
-            public int getCharacteristic() {
-                return getCharacteristic();
-            }
+    public Army getAttacker() {
+        return attacker;
+    }
 
-            @Override
-            public boolean isOffensive() {
-                return true;
-            }
+    public void setAttacker(Army attacker) {
+        this.attacker = attacker;
+    }
 
-            @Override
-            public boolean isDeffensive() {
-                return true;
-            }
+    public SquadTypes getSquadTypeA() {
+        return squadTypeA;
+    }
 
-            @Override
-            public boolean isHealing() {
-                return false;
-            }
-        };
-        makeSquad.makeSquad(newSquad.getCharacteristic());
+    public void setSquadTypeA(SquadTypes squadTypeA) {
+        this.squadTypeA = squadTypeA;
+    }
+
+    public SquadTypes getSquadTypeD() {
+        return squadTypeD;
+    }
+
+    public void setSquadTypeD(SquadTypes squadTypeD) {
+        this.squadTypeD = squadTypeD;
     }
 }

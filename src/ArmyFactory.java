@@ -3,6 +3,16 @@ public class ArmyFactory {
 
         Army newArmy = new Army(makeArmy().getArmyName(), makeArmy().getStrength(), makeArmy().getDexterity(), makeArmy().getIntelligence(), makeArmy().getFocus()) {
             @Override
+            public Army attacker(Army theAttacker) {
+                return theAttacker;
+            }
+
+            @Override
+            public Army counter(Army theCounter) {
+                return theCounter;
+            }
+
+            @Override
             public boolean isDead() {
                 return false;
             }

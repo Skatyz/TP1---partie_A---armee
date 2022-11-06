@@ -1,4 +1,4 @@
-public abstract class Army {
+public abstract class Army implements Enemy{
     private String armyName;
     private int strength;
     private int dexterity;
@@ -6,6 +6,7 @@ public abstract class Army {
     private int focus;
     private int healthPoints;
 
+    private SquadFactory newSquad;
     private Squad anySquad;
 
     public Army(String armyName, int strength, int dexterity, int intelligence, int focus) {
@@ -31,10 +32,24 @@ public abstract class Army {
         anySquad.isHealing();
 
         SquadFactory newSquad = new SquadFactory();
-        newSquad.makeSquad(anySquad.getCharacteristic());
+        newSquad.createOffensiveSquad(newSquad.getSquadTypes());
     }
 
-    public abstract boolean isDead();
+    public boolean isDead() {
+        return false;
+    }
+
+    @Override
+    public Army attacker(Army theAttacker) {
+        getNewSquad().createOffensiveSquad(getNewSquad().getSquadTypes());
+        int power = anySquad.getPower(theAttacker, getAnySquad().getCharacteristic());
+        return theAttacker;
+    }
+
+    @Override
+    public Army counter(Army theCounter) {
+        return theCounter;
+    }
 
     public String getArmyName() {
         return armyName;
@@ -90,5 +105,13 @@ public abstract class Army {
 
     public void setAnySquad(Squad anySquad) {
         this.anySquad = anySquad;
+    }
+
+    public SquadFactory getNewSquad() {
+        return newSquad;
+    }
+
+    public void setNewSquad(SquadFactory newSquad) {
+        this.newSquad = newSquad;
     }
 }
