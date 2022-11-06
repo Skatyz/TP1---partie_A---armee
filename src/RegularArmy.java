@@ -2,7 +2,7 @@ public class RegularArmy extends Army{
     public RegularArmy(String armyName, int strength, int dexterity, int intelligence, int focus) {
         super(armyName, strength, dexterity, intelligence, focus);
     }
-
+    @Override
     public void takeDamage(int attackPoints){
         if (getHealthPoints() <= 8 && getHealthPoints() > 0){
             setHealthPoints(getHealthPoints() + attackPoints);

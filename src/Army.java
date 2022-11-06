@@ -35,14 +35,12 @@ public abstract class Army implements Enemy{
         newSquad.createOffensiveSquad(newSquad.getSquadTypes());
     }
 
-    public boolean isDead() {
-        return false;
-    }
+    public abstract boolean isDead();
+
+    public abstract void takeDamage(int attackPoints);
 
     @Override
     public Army attacker(Army theAttacker) {
-        getNewSquad().createOffensiveSquad(getNewSquad().getSquadTypes());
-        int power = anySquad.getPower(theAttacker, getAnySquad().getCharacteristic());
         return theAttacker;
     }
 

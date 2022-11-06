@@ -3,7 +3,7 @@ public class BruteForceArmy extends Army {
     public BruteForceArmy(String armyName, int strength, int dexterity, int intelligence, int focus) {
         super(armyName, strength, dexterity, intelligence, focus);
     }
-
+    @Override
     public void takeDamage(int attackPoints){
         setHealthPoints(getHealthPoints() - attackPoints);
         if (getHealthPoints() <= 0 && attackPoints < 10){

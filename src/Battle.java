@@ -22,11 +22,14 @@ public class Battle {
             int counterPower = counter.getNewSquad().createDefensiveSquad(getSquadTypeD()).getPower(getCounter(), squad.getCharacteristic());
 
             if (attackPower > counterPower) {
-                counter.setHealthPoints(counter.getHealthPoints() - attackPower);
+                counter.takeDamage(attackPower);
                 attacker.setAnySquad(prizeForWinner);
             }
+            else if (attackPower == counterPower){
+                counter.setAnySquad(prizeForWinner);
+            }
             else{
-                attacker.setHealthPoints(attacker.getHealthPoints() - counterPower);
+                attacker.takeDamage(counterPower);
                 counter.setAnySquad(prizeForWinner);
             }
         }
