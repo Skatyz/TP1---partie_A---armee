@@ -17,6 +17,23 @@ public class Battle {
     }
 
     public void fight(Squad prizeForWinner){
+        boolean attackHasCapitulate = false;
+        boolean counterHasCapitulate = false;
+        if (attacker.getAnySquad() == null){
+            attackHasCapitulate = true;
+        }
+        if (counter.getAnySquad() == null){
+            counterHasCapitulate = true;
+        }
+
+        if (attackHasCapitulate){
+            counter.setAnySquad(prizeForWinner);
+
+            counter.setStrength(counter.getStrength()+1);
+            counter.setStrength(counter.getDexterity()+1);
+            counter.setStrength(counter.getIntelligence()+1);
+            counter.setStrength(counter.getFocus()+1);
+        }
         if (attacker.attacker(getAttacker()).isDead() && !counter.counter(getCounter()).isDead()){
             int attackPower = attacker.getNewSquad().createOffensiveSquad(getSquadTypeA()).getPower(getAttacker(), squad.getCharacteristic());
             int counterPower = counter.getNewSquad().createDefensiveSquad(getSquadTypeD()).getPower(getCounter(), squad.getCharacteristic());
@@ -24,6 +41,16 @@ public class Battle {
             if (attackPower > counterPower) {
                 counter.takeDamage(attackPower);
                 attacker.setAnySquad(prizeForWinner);
+
+                attacker.setStrength(attacker.getStrength()+1);
+                attacker.setStrength(attacker.getDexterity()+1);
+                attacker.setStrength(attacker.getIntelligence()+1);
+                attacker.setStrength(attacker.getFocus()+1);
+
+                counter.setStrength(counter.getStrength()-1);
+                counter.setStrength(counter.getDexterity()-1);
+                counter.setStrength(counter.getIntelligence()-1);
+                counter.setStrength(counter.getFocus()-1);
             }
             else if (attackPower == counterPower){
                 counter.setAnySquad(prizeForWinner);
@@ -31,6 +58,16 @@ public class Battle {
             else{
                 attacker.takeDamage(counterPower);
                 counter.setAnySquad(prizeForWinner);
+
+                counter.setStrength(counter.getStrength()+1);
+                counter.setStrength(counter.getDexterity()+1);
+                counter.setStrength(counter.getIntelligence()+1);
+                counter.setStrength(counter.getFocus()+1);
+
+                attacker.setStrength(attacker.getStrength()-1);
+                attacker.setStrength(attacker.getDexterity()-1);
+                attacker.setStrength(attacker.getIntelligence()-1);
+                attacker.setStrength(attacker.getFocus()-1);
             }
         }
     }

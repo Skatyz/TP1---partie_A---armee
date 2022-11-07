@@ -16,6 +16,11 @@ public class ArmyFactory {
             public boolean isDead() {
                 return false;
             }
+
+            @Override
+            public void takeDamage(int attackPoints) {
+
+            }
         };
         if (newArmy.getStrength() >= newArmy.getDexterity() + 10 && newArmy.getDexterity() + 10 >= newArmy.getFocus()){
             return new BruteForceArmy(newArmy.getArmyName(), newArmy.getStrength(), newArmy.getDexterity(), newArmy.getIntelligence(), newArmy.getFocus());
